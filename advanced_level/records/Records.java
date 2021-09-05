@@ -3,13 +3,13 @@ public class Records {
 		Person tom = new Person("Tom", 23);
 		System.out.println(tom.toString());
 		System.out.println(tom.name());     // Tom
-        System.out.println(tom.age());      // 36
-        System.out.println(tom.hashCode());
-         
-        Person bob = new Person("Bob", 21);
-        Person tomas = new Person("Tom", 23);
-        System.out.println(tom.equals(bob));    // false
-        System.out.println(tom.equals(tomas));  // true
+        	System.out.println(tom.age());      // 36
+		System.out.println(tom.hashCode());
+
+		Person bob = new Person("Bob", 21);
+		Person tomas = new Person("Tom", 23);
+		System.out.println(tom.equals(bob));    // false
+		System.out.println(tom.equals(tomas));  // true
 	}
 }
 
