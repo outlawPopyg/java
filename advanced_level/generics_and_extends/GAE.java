@@ -5,6 +5,21 @@ public class GAE {
          
         DepositAccount dAccount2 = new DepositAccount("12345");
         System.out.println(dAccount2.getId()); // => 12345
+
+
+        // Мы можем привести объект DepositAccount<Integer> 
+        // к Account<Integer> или DepositAccount<String> к 
+        // Account<String>:
+        DepositAccount<Integer> depAccount = new DepositAccount(10);
+        Account<Integer> account = (Account<Integer>) depAccount;
+        System.out.println(account.getId()); // => 10
+
+        // Но сделать то же самое с разнотипными объектами мы не можем.
+        // Например, следующий код не будет работать:
+
+        DepositAccount<Integer> depAccount = new DepositAccount(10);
+        Account<String> account = (Account<String>)depAccount;
+
     }
 }
 
